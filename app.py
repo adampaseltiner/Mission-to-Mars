@@ -24,15 +24,6 @@ def scrape():
    mars.update({}, mars_data, upsert=True)
    return redirect('/', code=302)
 
-# update the database
-.update(query_parameter, data, options)
-
-# tell Mongo to create a new document if one doesn't already exist
-mars.update({}, mars_data, upsert=True)
-
-# add a redirect after scraping data
-return redirect('/', code=302)
-
 # tell Flask to run
 if __name__ == "__main__":
    app.run()
